@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Different Types of CSS Selectors</title>
+    <style>
+        h1 {
+            color: darkblue;
+        }
+        #special {
+            color: crimson;
+            font-weight: bold;
+        }
+        .highlight {
+            background-color: yellow;
+        }
+        h2, p {
+            font-family: Arial, sans-serif;
+        }
+        * {
+            margin: 5px;
+        }
+        div p {
+            color: green;
+        }
+        div > span {
+            color: purple;
+        }
+        h2 + p {
+            background-color: lightgray;
+        }
+        h2 ~ ul {
+            border: 2px solid blue;
+            padding: 5px;
+        }
+        a:hover {
+            color: orange;
+        }
+
+        li:first-child {
+            font-weight: bold;
+        }
+
+        li:last-child {
+            color: red;
+        }
+
+        input:focus {
+            border: 2px solid green;
+        }
+        p::first-line {
+            color: darkgreen;
+        }
+
+        p::first-letter {
+            font-size: 24px;
+            color: brown;
+        }
+        a[target="_blank"] {
+            color: violet;
+        }
+
+        input[type="text"] {
+            background-color: #e6f7ff;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Selector Types Example</h1>
+
+    <h2 id="special">Simple Selectors</h2>
+    <p class="highlight">This paragraph uses a class selector with a yellow background.</p>
+
+    <div>
+        <p>This paragraph is inside a div (descendant selector).</p>
+        <span>This span is a direct child of div (child selector).</span>
+    </div>
+
+    <h2>Combinator Selectors</h2>
+    <p>This paragraph comes immediately after h2 (adjacent sibling).</p>
+    <ul>
+        <li>First item (first-child)</li>
+        <li>Second item</li>
+        <li>Last item (last-child)</li>
+    </ul>
+
+    <h2>Pseudo-Class and Attribute Selectors</h2>
+    <a href="https://example.com" target="_blank">External Link (target="_blank")</a><br>
+    <a href="#local">Local Link</a><br><br>
+
+    <input type="text" placeholder="Focus me!">
+    <input type="password" placeholder="Password field">
+
+    <p>This paragraph shows pseudo-elements. The first letter and first line are styled differently.</p>
+
+</body>
+</html>

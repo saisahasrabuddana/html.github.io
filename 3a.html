@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Semantic Elements Example</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        header, footer, nav, article, aside, section {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: white;
+        }
+        nav a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: blue;
+        }
+        aside {
+            background-color: #e8f0fe;
+        }
+        figure {
+            text-align: center;
+        }
+        .highlight {
+            color: darkred;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>My Blog Website</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Articles</a>
+        <a href="#">About</a>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <article>
+            <h2>Importance of Nature</h2>
+            <p>Nature provides us <span class="highlight">air, water, and food</span> — all essential for life.</p>
+            
+            <figure>
+                <img src="http://www.pixelstalk.net/wp-content/uploads/2016/08/Nature-wallpapers-Full-HD-backgroud.jpg" alt="Nature Image" width="200" height="200">
+                <figcaption>Fig: Beautiful view of nature</figcaption>
+            </figure>
+        </article>
+    </section>
+
+    <aside>
+        <h3>Related Links</h3>
+        <ul>
+            <li><a href="#">Benefits of Trees</a></li>
+            <li><a href="#">Save the Earth</a></li>
+        </ul>
+    </aside>
+</main>
+
+<footer>
+    <p>&copy; 2025 My Blog | Designed by <span class="highlight">SAHASRA</span></p>
+</footer>
+
+</body>
+</html>
