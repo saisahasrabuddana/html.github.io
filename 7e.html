@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>String Object Example</title>
+  <script>
+    function stringDemo() {
+      let str = "JavaScript is Fun!";
+      let result = "";
+
+      result += "Original String: " + str + "<br>";
+      result += "Length: " + str.length + "<br>";
+      result += "Uppercase: " + str.toUpperCase() + "<br>";
+      result += "Lowercase: " + str.toLowerCase() + "<br>";
+      result += "Substring(0,10): " + str.substring(0,10) + "<br>";
+      result += "Index of 'Fun': " + str.indexOf("Fun");
+
+      document.getElementById("stringOutput").innerHTML = result;
+    }
+  </script>
+</head>
+<body onload="stringDemo()">
+  <h2>String Object Example</h2>
+  <div id="stringOutput"></div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RegExp Object Example</title>
+  <script>
+    function regexDemo() {
+      let text = "The rain in Spain falls mainly in the plain.";
+      let pattern = /ain/g; // Regular expression
+      let matches = text.match(pattern);
+
+      document.getElementById("regexOutput").innerHTML =
+        "Text: " + text + "<br>" +
+        "Pattern: /ain/g<br>" +
+        "Matches Found: " + matches.length + "<br>" +
+        "Matched Words: " + matches.join(", ");
+    }
+  </script>
+</head>
+<body onload="regexDemo()">
+  <h2>RegExp Object Example</h2>
+  <div id="regexOutput"></div>
+</body>
+</html>

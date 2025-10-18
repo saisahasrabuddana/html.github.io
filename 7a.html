@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document Object Example</title>
+  <script>
+    function showDocumentInfo() {
+      document.getElementById("info").innerHTML =
+        "<b>Title:</b> " + document.title + "<br>" +
+        "<b>URL:</b> " + document.URL + "<br>" +
+        "<b>Last Modified:</b> " + document.lastModified + "<br>" +
+        "<b>Domain:</b> " + document.domain;
+    }
+  </script>
+</head>
+<body onload="showDocumentInfo()">
+  <h2>Document Object Example</h2>
+  <div id="info"></div>
+  <button onclick="document.bgColor='lightblue'">Change Background Color</button>
+</body>
+</html>

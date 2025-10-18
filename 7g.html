@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Date Object Example</title>
+  <script>
+    function dateDemo() {
+      let today = new Date();
+      let result = "";
+
+      result += "Current Date and Time: " + today + "<br>";
+      result += "Year: " + today.getFullYear() + "<br>";
+      result += "Month: " + (today.getMonth() + 1) + "<br>";
+      result += "Date: " + today.getDate() + "<br>";
+      result += "Day: " + today.getDay() + "<br>";
+      result += "Hours: " + today.getHours() + "<br>";
+      result += "Minutes: " + today.getMinutes();
+
+      document.getElementById("dateOutput").innerHTML = result;
+    }
+  </script>
+</head>
+<body onload="dateDemo()">
+  <h2>Date Object Example</h2>
+  <div id="dateOutput"></div>
+</body>
+</html>

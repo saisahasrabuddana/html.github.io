@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Window Object Example</title>
+  <script>
+    function showWindowInfo() {
+      alert("Window width: " + window.innerWidth + " | Height: " + window.innerHeight);
+    }
+
+    function openNewWindow() {
+      window.open("https://www.google.com", "_blank", "width=400,height=300");
+    }
+
+    function closeWindow() {
+      window.close();
+    }
+  </script>
+</head>
+<body>
+  <h2>Window Object Example</h2>
+  <button onclick="showWindowInfo()">Show Window Size</button>
+  <button onclick="openNewWindow()">Open New Window</button>
+  <button onclick="closeWindow()">Close This Window</button>
+</body>
+</html>
