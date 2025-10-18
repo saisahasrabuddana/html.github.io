@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Looping through Object</title>
+</head>
+<body>
+    <h2>Looping with for-in, forEach, for-of</h2>
+    <script>
+        const student = { name: "Durga", age: 20, course: "FSD" };
+
+        document.write("<b>Using for-in loop:</b><br>");
+        for (let key in student) {
+            document.write(key + ": " + student[key] + "<br>");
+        }
+
+        document.write("<br><b>Using forEach loop (Array example):</b><br>");
+        let fruits = ["Apple", "Banana", "Cherry"];
+        fruits.forEach(function(item) {
+            document.write(item + "<br>");
+        });
+
+        document.write("<br><b>Using for-of loop:</b><br>");
+        for (let fruit of fruits) {
+            document.write(fruit + "<br>");
+        }
+    </script>
+</body>
+</html>

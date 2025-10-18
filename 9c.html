@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form Validation</title>
+</head>
+<body>
+    <h2>Registration Page</h2>
+    <form onsubmit="return validateForm()">
+        Name: <input type="text" id="name"><br><br>
+        Mobile: <input type="text" id="mobile"><br><br>
+        Email: <input type="text" id="email"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p id="msg"></p>
+
+    <script>
+        function validateForm() {
+            let name = document.getElementById("name").value;
+            let mobile = document.getElementById("mobile").value;
+            let email = document.getElementById("email").value;
+            let message = "";
+
+            // Name validation
+            let namePattern = /^[A-Za-z][A-Za-z0-9]{5,}$/;
+            if (!namePattern.test(name)) {
+                message += "❌ Invalid Name: Must start with letter, min 6 chars<br>";
+            }
+
+            // Mobile validation
+            let mobilePattern = /^[0-9]{10}$/;
+            if (!mobilePattern.test(mobile)) {
+                message += "❌ Invalid Mobile: Must be 10 digits<br>";
+            }
+
+            // Email validation
+            let emailPattern = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+            if (!emailPattern.test(email)) {
+                message += "❌ Invalid Email format<br>";
+            }
+
+            if (message !== "") {
+                document.getElementById("msg").innerHTML = message;
+                return false;
+            } else {
+                document.getElementById("msg").innerHTML = "✅ Registration Successful!";
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

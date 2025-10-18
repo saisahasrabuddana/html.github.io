@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Functions Example</title>
+</head>
+<body>
+    <h2>Functions to Perform Operations</h2>
+    <script>
+        // Factorial Function
+        function factorial(n) {
+            let fact = 1;
+            for (let i = 1; i <= n; i++) {
+                fact *= i;
+            }
+            return fact;
+        }
+
+        // Fibonacci Function
+        function fibonacci(n) {
+            let a = 0, b = 1, c;
+            let series = [a, b];
+            for (let i = 2; i < n; i++) {
+                c = a + b;
+                series.push(c);
+                a = b;
+                b = c;
+            }
+            return series.join(", ");
+        }
+
+        // Prime Numbers up to n
+        function primes(n) {
+            let result = "";
+            for (let i = 2; i <= n; i++) {
+                let isPrime = true;
+                for (let j = 2; j <= Math.sqrt(i); j++) {
+                    if (i % j === 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+                if (isPrime) result += i + " ";
+            }
+            return result;
+        }
+
+        // Palindrome Check
+        function palindrome(num) {
+            let str = num.toString();
+            let reversed = str.split("").reverse().join("");
+            return str === reversed ? "Palindrome" : "Not a Palindrome";
+        }
+
+        // Get input and show all results
+        let n = parseInt(prompt("Enter a number:"));
+
+        document.write("<b>Factorial:</b> " + factorial(n) + "<br>");
+        document.write("<b>Fibonacci Series:</b> " + fibonacci(n) + "<br>");
+        document.write("<b>Prime Numbers up to " + n + ":</b> " + primes(n) + "<br>");
+        document.write("<b>Palindrome Check:</b> " + palindrome(n));
+    </script>
+</body>
+</html>
